@@ -81,18 +81,8 @@ plan = drake::drake_plan(
    
   latest_targets = target(
     dplyr::bind_rows(latest_targets_by_model) %>%
-<<<<<<< HEAD
-<<<<<<< HEAD
       dplyr::select(model_abbr, forecast_date, type, max_n, target) %>%
       dplyr::arrange(model_abbr, forecast_date, type, target),
-=======
-      dplyr::select(team_model, forecast_date, type, max_n, target) %>%
-      dplyr::arrange(team_model, forecast_date, type, target),
->>>>>>> master
-=======
-      dplyr::select(model_abbr, forecast_date, type, max_n, target) %>%
-      dplyr::arrange(model_abbr, forecast_date, type, target),
->>>>>>> master
     transform = combine(latest_targets_by_model)
   ),
   
@@ -106,18 +96,8 @@ plan = drake::drake_plan(
   
   submissions = target(
     dplyr::bind_rows(submissions_by_model) %>%
-<<<<<<< HEAD
-<<<<<<< HEAD
       dplyr::select(model_abbr, forecast_date, type, max_n, target) %>%
       dplyr::arrange(model_abbr, forecast_date, type, target),
-=======
-      dplyr::select(team_model, forecast_date, type, max_n, target) %>%
-      dplyr::arrange(team_model, forecast_date, type, target),
->>>>>>> master
-=======
-      dplyr::select(model_abbr, forecast_date, type, max_n, target) %>%
-      dplyr::arrange(model_abbr, forecast_date, type, target),
->>>>>>> master
     transform = combine(submissions_by_model)
   ),
   
